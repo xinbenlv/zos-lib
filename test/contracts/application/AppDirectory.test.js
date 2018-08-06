@@ -11,7 +11,7 @@ const ImplementationDirectory = Contracts.getFromLocal('ImplementationDirectory'
 
 const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
 
-contract('AppDirectory', ([_, appOwner, depsOwner, anotherAddress]) => {
+contract.skip('AppDirectory', ([_, appOwner, depsOwner, anotherAddress]) => {
   beforeEach(async function () {
     this.implementation_v0 = (await DummyImplementation.new()).address
     this.implementation_v1 = (await DummyImplementation.new()).address
